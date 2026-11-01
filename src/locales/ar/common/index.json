@@ -1,0 +1,14 @@
+{
+    "Validation Error !!": "خطأ في التحقق من البيانات !!",
+    "Get Contact Information Process Has Been Successfully !!": "تم جلب معلومات التواصل بنجاح !!",
+    "Sorry, Invalid File Type !!": "عذرًا، نوع الملف غير صالح !!",
+    "Sorry, Uploaded File Does Not Match Selected File Type !!": "عذرًا، الملف المرفوع لا يطابق نوع الملف المحدد !!",
+    "Sorry, Files is required !!": "عذرًا، الملفات مطلوبة !!",
+    "Sorry, Invalid Real File Type ({{fileName}}) !!": "عذرًا، المحتوى الفعلي للملف ({{fileName}}) غير صالح !!",
+    "Sorry, No Files Uploaded, Please Upload The Files": "عذرًا، لم يتم رفع صورة المستخدم !!",
+    "Sorry, Invalid File Mimetype, Only JPEG, PNG And Webp files are allowed !!": "عذرًا، يُسمح فقط بصور JPEG وPNG وWebP !!",
+    "Sorry, User Image Must Not Exceed 5 MB !!": "عذرًا، يجب ألا يتجاوز حجم صورة المستخدم 5 ميغابايت !!",
+    "Sorry, User Image Could Not Be Uploaded !!": "عذرًا، تعذر رفع صورة المستخدم !!",
+    "Sorry, Email Incorrect !!": "عذرًا، البريد الإلكتروني غير صحيح !!",
+    "Get Password For Bussiness Email Process Has Been Successfully !!": "تم جلب كلمة مرور بريد العمل بنجاح !!"
+}

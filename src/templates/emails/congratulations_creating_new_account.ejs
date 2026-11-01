@@ -1,0 +1,45 @@
+<%
+const translations = {
+    ar: {
+        title: "مرحباً بك",
+        greeting: `مرحباً بك في ${websiteName}!`,
+        paragraphs: [
+            "يسعدنا انضمامك إلى مجتمع متجرنا الإلكتروني.",
+            "يمكنك الآن استكشاف منتجاتنا والاستفادة من العروض والخصومات المتاحة.",
+            "شكرًا لثقتك بنا، ونتطلع إلى خدمتك دائمًا.",
+        ],
+        closing: "أطيب التحيات،",
+        team: `فريق ${websiteName}`,
+    },
+    en: {
+        title: "Welcome",
+        greeting: `Welcome to ${websiteName}!`,
+        paragraphs: [
+            "We are delighted to have you join our online store community.",
+            "You can now explore our products and benefit from the available offers and discounts.",
+            "Thank you for trusting us. We look forward to serving you.",
+        ],
+        closing: "Best regards,",
+        team: `The ${websiteName} team`,
+    },
+};
+const selectedLanguage = translations[language] ? language : "en";
+const content = translations[selectedLanguage];
+const direction = selectedLanguage === "ar" ? "rtl" : "ltr";
+%>
+<!doctype html>
+<html lang="<%= selectedLanguage %>" dir="<%= direction %>">
+<body style="margin:0; padding:24px; background:#f5f5f5; font-family:Arial,sans-serif; color:#222;">
+    <main style="max-width:680px; margin:auto; padding:28px; background:#fff; border:1px solid <%= websiteColor %>; border-radius:8px; line-height:1.8;">
+        <header style="text-align:center; color:<%= websiteColor %>;">
+            <img src="<%= baseApiImagesUrl %>/images/LogoWithTransparentBackground.webp" alt="<%= websiteName %>" width="100" height="100">
+            <h2><%= content.title %></h2>
+        </header>
+        <p><strong><%= content.greeting %></strong></p>
+        <% content.paragraphs.forEach((paragraph) => { %>
+            <p><%= paragraph %></p>
+        <% }); %>
+        <p><%= content.closing %><br><strong style="color:<%= websiteColor %>;"><%= content.team %></strong></p>
+    </main>
+</body>
+</html>

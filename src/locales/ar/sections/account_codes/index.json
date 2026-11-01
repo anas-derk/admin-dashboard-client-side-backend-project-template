@@ -1,0 +1,23 @@
+{
+    "Resend Allowed !!": "إعادة الإرسال متاحة !!",
+    "Sorry, Please Wait Before Resending !!": "عذرًا، يرجى الانتظار قبل إعادة الإرسال !!",
+    "Sorry, Verification Code Expired !!": "عذرًا، انتهت صلاحية رمز التحقق !!",
+    "Code is Valid !!": "رمز التحقق صالح !!",
+    "Sorry, Too Many Attempts, Please Try Again Later !!": "عذرًا، عدد المحاولات كبير جدًا، يرجى المحاولة لاحقًا !!",
+    "Not locked !!": "لا يوجد حظر !!",
+    "Sorry, This Session Is Not Exist !!": "عذرًا، هذه الجلسة غير موجودة !!",
+    "Get Session Process Has Been Successfully !!": "تم جلب الجلسة بنجاح !!",
+    "Creating New Session Process Has Been Successfully !!": "تم إنشاء جلسة جديدة بنجاح !!",
+    "Creating New Verification Code Process Has Been Successfully !!": "تم إنشاء رمز تحقق جديد بنجاح !!",
+    "Sorry, This Verification Code Is Not Exist !!": "عذرًا، رمز التحقق غير موجود !!",
+    "Get Verification Code Process Has Been Successfully !!": "تم جلب رمز التحقق بنجاح !!",
+    "Sorry, This Verification Code For This {{id}} Is Not Exist !!": "عذرًا، لا يوجد رمز تحقق مطابق لهذه الجلسة !!",
+    "Sorry, Type Of Use Verification Code Is Not Valid !!": "عذرًا، نوع استخدام رمز التحقق غير صالح !!",
+    "Sorry, This Code For This {{id}} Is Not Valid !!": "عذرًا، رمز التحقق غير صالح !!",
+    "Checking Code Process Has Been Succesfully !!": "تم فحص رمز التحقق بنجاح !!",
+    "Verify Code Process Has Been Succesfully !!": "تم تأكيد رمز التحقق بنجاح !!",
+    "Sorry, This Code Is Not Verified !!": "عذرًا، لم يتم تأكيد رمز التحقق !!",
+    "This Code Is Verified !!": "تم تأكيد رمز التحقق !!",
+    "This Code For This Email Is Valid !!": "رمز التحقق الخاص بهذا البريد الإلكتروني صالح !!",
+    "This Code For This Email Is Not Valid !!": "رمز التحقق الخاص بهذا البريد الإلكتروني غير صالح !!"
+}

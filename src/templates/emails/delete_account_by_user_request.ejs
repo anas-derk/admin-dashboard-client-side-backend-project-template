@@ -1,0 +1,49 @@
+<%
+const translations = {
+    ar: {
+        preview: "تأكيد حذف حسابك نهائيًا بناءً على طلبك",
+        title: "تم حذف حسابك نهائيًا",
+        greeting: "مرحباً،",
+        message: `نأسف لإبلاغك بأنه تم حذف حسابك نهائيًا من ${websiteName} بناءً على طلبك.`,
+        contact: "إذا كان لديك أي سؤال، يمكنك التواصل معنا عبر",
+        closing: "مع خالص التقدير،",
+        team: `فريق ${websiteName}`,
+    },
+    en: {
+        preview: "Confirmation that your account was permanently deleted",
+        title: "Your account was permanently deleted",
+        greeting: "Hello,",
+        message: `Your ${websiteName} account was permanently deleted at your request.`,
+        contact: "For questions or assistance, contact us at",
+        closing: "With appreciation,",
+        team: `The ${websiteName} team`,
+    },
+};
+const selectedLanguage = translations[language] ? language : "en";
+const content = translations[selectedLanguage];
+const direction = selectedLanguage === "ar" ? "rtl" : "ltr";
+%>
+<!doctype html>
+<html lang="<%= selectedLanguage %>" dir="<%= direction %>">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content.title %></title>
+</head>
+<body style="margin:0; padding:24px; background:#f3f6f5; font-family:Arial,sans-serif; color:#18221f;">
+    <span style="display:none; max-height:0; overflow:hidden;"><%= content.preview %></span>
+    <main style="max-width:680px; margin:auto; padding:28px; background:#fff; border-radius:8px; line-height:1.8;">
+        <header style="text-align:center;">
+            <img src="<%= baseApiImagesUrl %>/images/LogoWithTransparentBackground.webp" alt="<%= websiteName %>" width="82" height="82">
+            <div style="height:4px; margin-top:18px; background:<%= websiteColor %>;"></div>
+            <h2><%= content.title %></h2>
+        </header>
+        <p><strong><%= content.greeting %></strong></p>
+        <p><%= content.message %></p>
+        <p style="padding:14px; background:#f3f6f5; border-<%= selectedLanguage === 'ar' ? 'right' : 'left' %>:4px solid <%= websiteColor %>;">
+            <%= content.contact %> <a href="mailto:<%= businessEmail %>" style="color:<%= websiteColor %>;"><%= businessEmail %></a>.
+        </p>
+        <p><%= content.closing %><br><strong style="color:<%= websiteColor %>;"><%= content.team %></strong></p>
+    </main>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<%
+const translations = {
+    ar: {
+        title: "تأكيد عنوان البريد الإلكتروني",
+        greeting: "مرحباً،",
+        intro: `شكرًا لاختيارك ${websiteName}. استخدم رمز التحقق التالي لإكمال العملية:`,
+        warning: "لا تشارك هذا الرمز مع أي شخص.",
+        followUs: "تابعنا",
+        regards: "مع أطيب التحيات،",
+        rights: "جميع الحقوق محفوظة.",
+    },
+    en: {
+        title: "Verify your email address",
+        greeting: "Hello,",
+        intro: `Thank you for choosing ${websiteName}. Use the following verification code to complete the process:`,
+        warning: "Do not share this code with anyone.",
+        followUs: "Follow us",
+        regards: "Best regards,",
+        rights: "All rights reserved.",
+    },
+};
+const selectedLanguage = translations[language] ? language : "en";
+const content = translations[selectedLanguage];
+const direction = selectedLanguage === "ar" ? "rtl" : "ltr";
+%>
+<!doctype html>
+<html lang="<%= selectedLanguage %>" dir="<%= direction %>">
+<body style="margin:0; padding:24px; background:#f5f5f5; font-family:Arial,sans-serif; color:#222;">
+    <main style="max-width:680px; margin:auto; padding:28px; background:#fff; border:1px solid <%= websiteColor %>; border-radius:8px; line-height:1.8;">
+        <header style="text-align:center;">
+            <a href="<%= websiteUrl %>">
+                <img src="<%= baseApiImagesUrl %>/images/LogoWithTransparentBackground.webp" alt="<%= websiteName %>" width="100" height="100">
+            </a>
+            <h2><%= content.title %></h2>
+        </header>
+        <p><strong><%= content.greeting %></strong></p>
+        <p><%= content.intro %></p>
+        <div style="margin:24px auto; padding:8px 16px; width:max-content; color:<%= websiteColor %>; border:2px solid <%= websiteColor %>; border-radius:10px; font-size:28px; font-weight:bold; letter-spacing:6px;"><%= generatedCode %></div>
+        <p><%= content.warning %></p>
+        <p><strong><%= content.followUs %></strong></p>
+        <div style="display:flex; gap:14px;">
+            <a href="https://www.facebook.com/share/1DsaNmAm5Q"><img src="<%= baseApiImagesUrl %>/images/social_media/facebook.png" alt="Facebook" width="25" height="25"></a>
+            <a href="https://www.instagram.com/ubuyblues"><img src="<%= baseApiImagesUrl %>/images/social_media/instagram.png" alt="Instagram" width="25" height="25"></a>
+            <a href="https://www.tiktok.com/@ubuyblues"><img src="<%= baseApiImagesUrl %>/images/social_media/tiktok.png" alt="TikTok" width="25" height="25"></a>
+        </div>
+        <p><%= content.regards %><br><a href="<%= websiteUrl %>" style="color:<%= websiteColor %>;"><%= websiteName %></a></p>
+        <footer style="text-align:center; color:#777; font-size:12px;">© <%= new Date().getFullYear() %> <%= websiteName %>. <%= content.rights %></footer>
+    </main>
+</body>
+</html>

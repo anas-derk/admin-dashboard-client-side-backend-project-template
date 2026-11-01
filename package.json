@@ -1,0 +1,64 @@
+{
+  "name": "admin-dashboard-client-side-backend-project-template",
+  "version": "1.0.0",
+  "author": "Anas Adnan Derk",
+  "license": "ISC",
+  "description": "Server-side backend project template for admin dashboard client-side websites.",
+  "private": true,
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anas-derk/admin-dashboard-client-side-backend-project-template.git"
+  },
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node src/index",
+    "dev": "nodemon src/index",
+    "test": "cross-env NODE_ENV=test node src/index",
+    "staging": "cross-env NODE_ENV=staging node src/index"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "body-parser": "^2.3.0",
+    "cors": "^2.8.6",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^18.0.6",
+    "ejs": "^7.0.1",
+    "express": "^5.2.1",
+    "file-type": "^22.1.1",
+    "ioredis": "^6.0.0",
+    "jsonwebtoken": "^9.0.3",
+    "libphonenumber-js": "^1.13.14",
+    "mongoose": "8.9.5",
+    "multer": "^2.4.0",
+    "node-code-generator": "^1.0.3",
+    "nodemailer": "^10.0.15",
+    "rate-limiter-flexible": "^11.2.1",
+    "sharp": "^0.35.5",
+    "zod": "3.25.42"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0",
+    "nodemon": "^3.1.14"
+  },
+  "engines": {
+    "node": ">=20.11.0",
+    "npm": ">=10.2.4"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "src",
+      ".env",
+      ".env.*"
+    ],
+    "ignore": [
+      "node_modules",
+      "public/uploads"
+    ],
+    "ext": "js,json,ejs",
+    "verbose": true,
+    "env": {
+      "NODE_ENV": "development"
+    },
+    "restartable": "rs"
+  }
+}
